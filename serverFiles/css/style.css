@@ -1,0 +1,150 @@
+*{transition:0.2s ease;outline:none;
+}
+::-webkit-scrollbar{width: 10px;}
+::-webkit-scrollbar-track{border-radius:2px;background: #f1f1f1;}
+::-webkit-scrollbar-thumb {border-radius:2px;background: #888; }
+::-webkit-scrollbar-thumb:hover{background: #555;}
+
+body{background-image:url('../images/back.png');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center;height:97vh;}
+::backdrop{background-image:url('../images/back.png');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center;}
+#loader{height:100%;width:100%;background:white;position:absolute;top:0;left:0;}
+#loader span{font-size:50px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-family:viga;animation-name:load;animation-duration: 2s;animation-iteration-count: infinite;z-index:99999;}
+@keyframes load{
+50% {opacity:50%;}
+100% {opacity:100%;}
+}
+
+.gitlink{text-decoration:none;color:white;background:black;padding:5px 15px;font-size:15px;border-radius:50px;position:fixed;bottom:10px;font-family:viga;transition:0.3s ease;}
+.gitlink:hover{color:black;background:white;}
+
+.topHead{color:white;background:black;padding:10px;}
+.topHead .main{font-size:50px;font-family:viga;}
+.topHead .main .wlcm{font-size:30px;font-family:viga;width:calc(100% - 350px);display:inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.topHead img{width:60px;vertical-align:middle;}
+.topHead .menu{float:right;font-size:45px;padding:none;}
+.topHead .menu span{float:right;margin-bottom:10px;}
+.topHead .menu .menuButs{position:fixed;margin-left:-95px;margin-top:16px;}
+.topHead .menu .menuButs button{display:none;width:150px;font-size:30px;font-family:viga;background:rgba(50,51,52,0.5);color:white;border:transparent 2px solid;}
+.topHead .menu .menuButs button:hover{background:rgba(50,51,52,0.75);}
+.topHead .menu:hover .menuButs button{display:block;}
+
+
+.sign{width: 50%;border: 2px solid white;min-height:50%;transform: translate(-50%, -50%);top: 50%;left:50%;position:absolute;border-radius:10px;background:rgba(10,11,12,0.75);text-align:center;}
+.sign div{transform: translate(-50%, -50%);top: 50%;left:50%;position:absolute;text-align:center;min-height:0%;width:100%;}
+.sign div input{font-size:25px;border:2px white solid;border-radius:5px;background:rgba(50,51,52,0.75);padding:5px;color:white;font-family:viga;width:75%;margin-bottom:10px;}
+.sign div input[name=pass]{width:calc(75% - 50px);}
+.sign div button{font-size:25px;border:2px white solid;border-radius:5px;background:rgba(50,51,52,0.5);padding:5px;color:white;font-family:viga;width:77%;margin-bottom:10px;}
+.sign div button:hover{background:rgba(50,51,52,0.9);}
+.sign div #passTog{width:40px;height:40px;border-radius:100%;display:inline;}
+
+.controller{border:3px white solid;background:rgba(10,12,13,0.5);margin-top:5px;height:calc(100% - 100px);border-radius:5px;}
+.controller .isConnected{font-size:20px;font-family:viga;border:white 3px solid;padding:2px;margin-top:15px;border-radius:100px;background:rgba(50,51,52,0.75);color:white;width:210px;text-align:center;margin-left:auto;margin-right:auto;display:block;}
+.controller .isConnected svg{vertical-align:middle;}
+#sendNrecv{overflow:auto;height:calc(100% - 150px);width:99%;margin-top:10px;color:white;}
+#sendNrecv *{width:calc(100% - 40px);margin-left:10px;padding:15px 5px;font-family:viga;font-size:20px;word-wrap: break-word;border-radius:15px;color:white !important;}
+#sendNrecv .send{border-right:5px blue solid;background:rgba(120,120,200,0.2);text-align:right;}
+#sendNrecv .recv{border-left:5px red solid;background:rgba(200,120,120,0.2);}
+#sendNrecv img{max-width:50%;border:2px solid white;}
+
+#cmnds{width:calc(100% - 150px);font-family:'fira code';font-size:25px;margin-left:5px;margin-top:10px;padding:5px;border-radius:2px;border:1px white solid;}
+.controller button{width:50px;color:white;background:black;border:2px white solid;font-size:25px;padding:5px;border-radius:2px;font-weight:bold;}
+.controller button:hover{color:black;background:white;}
+.controller button:active{color:black;background:white;border-radius:100px;}
+
+#sndCmnd img{width:100%;display:none;}
+
+#pressKey{position:absolute;background:rgba(40,41,42,0.9);height:calc(100% - 15px);width:0px;transition:0.3s ease;display:inline-block;border-radius:15px;}
+#keyHead{color:white;display:none;font-family:viga;font-size:25px;top:10px;left:10px;position:absolute;}
+#closePK{font-size:50px;border-radius:100%;width:60px;height:60px;text-align:center;border:none;background:rgba(50,51,52,0.0);color:white;float:right;display:none;margin-top:10px;margin-right:10px;}
+#closePK:hover{color:black;background:white;}
+#key{position:absolute;color:white;font-family:viga;transform: translate(-50%, -50%);top: 50%;left: 50%;display:none;background:transparent;padding:5px;width:50%;height:30%;}
+#key input{font-size:25px;padding:5px;font-family:viga;width:calc(100% - 100px);border-radius:50px;border:2px white solid;}
+#key button{font-size:20px;font-family:viga;width:32.5%;padding:5px;height:40px;color:white;background:transparent;border:white 2px solid;border-radius:50px;margin-bottom:10px;}
+#key button.sendChar{width:70px;}
+#key button:hover{color:black;background:white;}
+
+.profile{color:white;font-family:viga;font-size:25px;transform: translate(-50%, -50%);top: 50%;left: 50%;position:absolute;background:rgba(10,12,13,0.75);width:75%;height:50px;padding:10px;border-radius:5px;border:3px white solid;}
+.profData{width:100%;height:50px;padding:10px;}
+.profData .usrn{text-align:left;}
+.profile button{width:100%;height:100%;font-size:25px;font-family:viga;background:transparent;color:white;border:3px solid white;border-radius:5px;margin-bottom:10px;}
+.profile button:hover{color:black;background:white;}
+.profile input{font-size:25px;width:calc(100% - 9px);font-family:viga;margin-bottom:10px;}
+.profile .dlt{background:rgba(250,12,13,0.75);}
+.profile .dlt:hover{background:white;;color:rgba(250,12,13,1);}
+#delete{display:none;border:5px red solid;}
+
+#chngPswd{background:rgba(40,41,42,0.9);width:0;height:calc(100% - 15px);position:absolute;border-radius:15px;display:inline-block;}
+#cpw{width:50%;height:200px;position:absolute;transform: translate(-50%, -50%);top: 50%;left: 50%;display:none;}
+#cpw input{width:calc(100% - 13px);padding:5px;font-size:25px;font-family:viga;margin-bottom:10px;}
+#cpw button{font-family:viga;font-size:25px;background:transparent;border:3px solid white;color:white;width:100%;}
+#cpw button:hover{color:black;background:white;}
+#newp{width:calc(100% - 63px) !important;}
+#cpwdTog{width:40px !important;height:40px !important;border-radius:100%;display:inline;text-align:center;}
+#cpwdTog:hover{background:rgba(50,51,52,0.9) !important;}
+
+#dltAcnt{position:absolute;background:rgba(40,41,42,0.9);width:0;height:calc(100% - 15px);border-radius:15px;display:inline-block;right:8px;}
+#dltHead{color:white;display:none;font-family:viga;font-size:25px;top:10px;left:10px;position:absolute;}
+#closeDlt{font-size:50px;border-radius:100%;width:60px;height:60px;text-align:center;border:none;background:rgba(50,51,52,0.0);color:white;float:right;display:none;margin-top:10px;margin-right:10px;}
+#closeDlt:hover{color:black;background:white;}
+#dltElem{width:50%;height:100px;position:absolute;transform: translate(-50%, -50%);top: 50%;left: 50%;display:none;}
+#dltElem input{width:calc(100% - 13px);padding:5px;font-size:25px;font-family:viga;margin-bottom:10px;}
+#dltElem button{font-family:viga;font-size:25px;background:rgba(250,12,13,0.75);border:3px solid white;color:white;width:100%;border-radius:5px;}
+#dltElem button:hover{color:rgb(250,12,13);background:white;}
+
+.help{color:white;font-family:viga;width:75%;text-align:center;min-height:80%;margin:auto;margin-top:10px;background:rgba(10,11,12,0.75);border-radius:15px; margin-bottom:50px;padding:10px;}
+.help .header{font-size:50px;}
+
+.help .detR{clear:both;text-align:center;width:80%;margin:auto;margin-bottom:25px;}
+.help .detR span{font-size:30px;}
+.help .detR img{width:50%;float:left;}
+
+.help .detL{clear:both;text-align:center;width:80%;margin:auto;margin-bottom:25px;}
+.help .detL span{font-size:30px;}
+.help .detL img{width:50%;float:right;}
+
+#supp{font-size:20px;}
+
+#upldFl{width:calc(100% - 15px);height:0;background:rgba(40,41,42,0.9);position:absolute;border-radius:15px;}
+#upldFl div button{font-size:25px;color:white;font-family:viga;border:2px solid white;position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);padding:5px 20px;-webkit-text-stroke-width: 0.25px;-webkit-text-stroke-color: black;}
+#upldFl div button:hover{color:black;background:white;}
+#upldFl div button:active{padding:5px 25px;border-radius:100px;}
+#slctFl{background:transparent;}
+#sndFl{background:rgba(10,11,12,0.5);}
+
+#upldFl div img{border:2px solid white;position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);padding:5px;max-width:80%;max-height:75%;background:white;}
+
+#prvwSnd{display:non;}
+
+@media screen and (max-width: 800px){
+.topHead .main{font-size:30px;}
+.topHead .main .wlcm{font-size:20px;font-family:viga;width:150px;}
+.topHead img{width:35px;}
+.topHead .menu{float:right;font-size:25px;}
+.topHead .menu .menuButs{margin-left:-115px;}
+.signText{background:rgba(50,51,52,0.1);}
+.sign{width:75%;min-height:300px;}
+#key{width:75%;}
+#cpw{width:80%;}
+#dltElem{width:80%;}
+.profile{width:90%;}
+.profile *{font-size:15px;}
+.profile input{font-size:15px;}
+.profile button{font-size:15px;}
+.profData .usrn{text-align:center;}
+
+.help .detR span{font-size:15px;}
+.help .detR img{width:100%;}
+
+.help .detL span{font-size:15px;}
+.help .detL img{width:100%;}
+
+.controller{border:3px white solid;background:rgba(10,12,13,0.75);margin-top:10px;height:calc(100% - 75px);}
+#cmnds{width:calc(100% - 120px);font-size:20px;}
+.controller button{width:40px;font-size:20px;}
+}
+
+@media screen and (max-width: 410px){
+.topHead .main .wlcm{display:none;}
+#cmnds{width:calc(100% - 100px);font-size:15px;}
+.controller button{width:30px;font-size:15px;}
+}
