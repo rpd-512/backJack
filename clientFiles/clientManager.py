@@ -10,7 +10,7 @@ from pyfiglet import figlet_format
 from requests import post
 
 siteName = "http://1nvict.000webhostapp.com/backjack/"
-#siteName="http://192.168.43.153/backJack/"
+
 def whatIp():
     ip = popen("hostname -I | awk '{print $1}'").read()
     if(ip == "\n"):
